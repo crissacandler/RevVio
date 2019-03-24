@@ -34,13 +34,11 @@
    
       </div>
     </div> 
+    </div>
 
-    <div class="btn-divider">
-    <v-btn color="#25719F" depressed outline round @click="btnAction">Call Dispatch</v-btn> 
-    <v-btn class="blue-btn" color="#25719F" depressed round @click="btnAction">Done</v-btn> 
-    </div>
-    </div>
   </v-container>
+      <v-btn color="#25719F" depressed outline round @click="btnAction">Call Dispatch</v-btn> 
+    <v-btn class="blue-btn" color="#25719F" depressed round @click="btnAction">Done</v-btn> 
 </div>
 </template>
 
@@ -66,7 +64,7 @@ import Header from './Header.vue'
     },
     methods:{
       btnAction(){
-        this.$router.push({name: 'loading'})
+        this.$router.push({name: 'thanks'})
       }
     }
   }
