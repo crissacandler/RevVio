@@ -1,0 +1,94 @@
+@import url("https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:400,500,600,700");
+
+.container{
+   /* text-align: center; */
+  min-height:100%;
+  min-width:100%; 
+}
+.title{
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 500;
+  font-size: 36px !important;
+ line-height: normal;
+ }
+ .login-title{
+   font-size: 36px !important;
+   margin-top: 164px;
+   margin-bottom: 82px;
+ }
+.format{
+   margin: 98px 50px;
+}
+.v-icon{
+   font-size: 21px;
+}
+.application{
+   font-family:  Montserrat;
+}
+.btn-divider{
+   margin-top: 80%;
+}
+ .uppercase{
+   text-transform: uppercase;
+ }
+ .prompt{
+    margin: 35px 0px;
+    font-size: 30px;
+    color: #00666C;
+ }
+ .subPrompt{
+   font-weight: 500;
+   font-size: 16px;
+   color: #000000;
+ }
+ .number{
+   font-weight: 500;
+   font-size: 30px;
+   color: #000000;
+}
+
+ .bluish{
+   color: #0099CA;
+} 
+.greenish{
+   color:  #00666C;
+}
+.zipcode{
+   font-weight: bold;
+   font-size: 14px;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   color: #6E6E6E;}
+
+.v-btn{
+      font-size: 18px;
+      min-height:60px;
+      min-width: 100%;
+   }
+.gray-btn{
+      background: #BFBFBF;
+      color: #000000;
+    }
+.blue-btn{
+      background: #25719F;
+      color: #FFFFFF;
+    }
+.clear-btn{
+      background: #FFFFFF;
+      color: #25719F;
+}
+.header{
+   display: flex;
+   align-content: space-between;
+
+}
+
+.bigStatus{
+   margin: 0px 0px 0px 100px;
+   border: 2px solid #00666C;
+   box-sizing: border-box;
+   border-radius: 100px;
+
+}
+
