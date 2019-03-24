@@ -1,28 +1,28 @@
 <template>
-  <v-container class="container">
-    <header></header>
-    <v-icon color="#006686">fa-align-left</v-icon>
-    <!-- <div class="format"> -->
+  <div>
+    <Header/>
+    <v-container class="container">
     <div class="prompt">Your Queue</div>
-    <v-card class="mycard">
+    <div class="myCard" @click="goToCitizenPage">
       <div class="information"> 
-      <div class="number">{{number}}</div>
-      <div class="subPrompt">{{street}}</div>
-      <div class="zipcode">{{city}}{{zipcode}}</div>
+        <div class="number">{{number}}</div>
+        <div class="subPrompt">{{street}}</div>
+        <div class="zipcode">{{city}} {{zipcode}}</div>
       </div>
-      <div class="status">{{status}}</div>
-    </v-card>
-    <div class="backCard"></div>
-    <div class="btn-divider">
-    <v-btn class="gray-btn" round @click="btnAction">Confirm</v-btn> 
+      <div class="status">
+        <v-icon class="caret" color="#C92637">fas fa-caret-up</v-icon>
+        {{status}}
+     </div>
     </div>
-    <!-- </div> -->
+    <div class="btn-divider">
+    <v-btn class="gray-btn" round @click="btnAction">Load More</v-btn> 
+    </div>
   </v-container>
+  </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-
+import Header from './Header.vue'
   export default {
     name: 'current-citizen',
     components:{
@@ -40,6 +40,9 @@ import Header from '../components/Header.vue'
     methods:{
       btnAction(){
         this.$router.push({name: 'status'})
+      },
+      goToCitizenPage(){
+        this.$router.push({name: 'citizen'})
       }
     }
   }
@@ -47,39 +50,32 @@ import Header from '../components/Header.vue'
 
 <style scss scoped>
 .information{
+  margin:20px;
   align-content: left;
-
 }
 
-
+.caret{
+  margin-bottom:5px
+}
 .status{
-flex-direction: row-reverse;
-
-font-size: 28px;
-
-  color: #C92637;
+ margin: 13px 20px 20px 20px;
+ font-weight: 600;
+ font-size: 28px;
+ color: #C92637;
 }
 
 .myCard{
+  display:flex;
+  justify-content: space-between;
   flex-flow: row wrap;
   padding:33px;
-  background: green;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.48);
   border-radius: 5px;
   padding:5px !important;
   min-width:315px !important;
   min-height:190px !important;
-  z-index:10;
-}
-.backCard{
- background: #D60000;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.48);
-  border-radius: 5px;
-  min-height:190px !important;
-  min-width:350px !important;
-  z-index: 0 ;
-}
-.container{
-  color: #FFFFFF;
+  border-left-color: red !important;
+  border-left-style: thick !important;
+  border-left-width: 100px !important;
 }
 </style>

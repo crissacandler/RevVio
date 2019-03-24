@@ -1,31 +1,47 @@
 <template>
+<div>
+    <Header/>
   <v-container class="container">
-    <Header/>>
-    <v-icon color="#006686">fa-align-left</v-icon>
     <div class="format">
     <div class="prompt">Citizen</div>
-    <v-icon color="#00666C">fa-location-arrow</v-icon>
-    <div class="uppercase">Address</div>
-    <div class="number bluish">{{number}}</div>
-    <div class="subPrompt bluish">{{street}}</div>
-    <div class="zipcode">{{zipcode}}</div>
-    <v-icon color="#00666C">fa-building</v-icon>
-    <div class="uppercase">Neighborhood</div>
-    <v-icon color="#00666C">fa-user</v-icon>
-    <div class="uppercase">Citizens</div>
-    <div>{{adultNumber}}</div>
-    <div class="zipcode">Adults</div>
-    <div>{{childNumber}}</div>
-    <div class="zipcode">Children</div>
+    <div class="big-big-container">
+      <v-icon class="icon-style" color="#00666C">fa-location-arrow</v-icon>
+      <div class="address-container">
+        <div class="uppercase">Address</div>
+        <div class="number bluish">{{number}}</div>
+        <div class="subPrompt bluish">{{street}}</div>
+        <div class="zipcode2">{{zipcode}}</div>
+      </div>
+    </div>
+    <div class="big-big-container">
+      <v-icon  class="icon-style" color="#00666C">fa-building</v-icon>
+      <div class="hood-container">
+        <div class="uppercase">Neighborhood</div>
+        <div>{{hood}}asdfsd</div>
+      </div>
+    </div>
+    <div class="big-big-container">
+      <v-icon  class="icon-style" color="#00666C">fa-user</v-icon>
+        <div class="citizen-container another-one">    
+        <div class="uppercase">Citizens</div>  
+        <div class="another-one">
+          <div>{{adultNumber}}</div>
+         <div class="zipcode">Adults</div>
+         </div>
 
-
+        <div>{{childNumber}}</div>
+        <div class="zipcode">Children</div> 
+   
+      </div>
+    </div> 
 
     <div class="btn-divider">
-    <v-btn class="clear-btn" round @click="btnAction">Confirm</v-btn> 
-    <v-btn class="blue-btn" round @click="btnAction">Confirm</v-btn> 
+    <v-btn color="#25719F" depressed outline round @click="btnAction">Call Dispatch</v-btn> 
+    <v-btn class="blue-btn" color="#25719F" depressed round @click="btnAction">Done</v-btn> 
     </div>
     </div>
   </v-container>
+</div>
 </template>
 
 <script>
@@ -50,13 +66,26 @@ import Header from './Header.vue'
     },
     methods:{
       btnAction(){
-        this.$router.push({name: 'status'})
+        this.$router.push({name: 'loading'})
       }
     }
   }
 </script>
 
 <style scss scoped>
+.address-container{
+  margin-bottom:30px;
+}
+.citizen-container{
+  display: flex;
+ flex-direction: row; 
+}
+.another-one{
+  flex-direction: column; 
+}
+.icon-style{
+  margin:0px 20px 90px 10px;
+}
 
 
 </style>

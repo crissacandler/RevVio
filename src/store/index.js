@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default  new Vuex.Store({
     state: {
       queue: [],
+      status:false,
       hoods: {"02138" : "mid-cambridge",
       "02459": "newton",
       "02446": "brookline"

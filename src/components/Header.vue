@@ -1,18 +1,30 @@
 <template>
 <div class="header">
-    WHAT YOU WANT YOU KNOW I GOT IT
-    <!-- <v-icon color="#006686">fa-align-left</v-icon>
-    asdfsdfsdf
-    <v-spacer></v-spacer>sdfsdfsdfsd
-    <v-btn class="bigStatus">STASTGSF</v-btn>
-    sdfsdfds
-    <v-btn>sdafsdfsdfasd</v-btn> -->
+    <v-icon color="#006686">fa-align-left</v-icon>
+    <div class="bigStatus">
+        <div class="bigBig">
+        <v-icon color="#00666C">{{statusIcon()}}</v-icon> 
+    {{updatedStatus()}}
+    </div>
+    </div>
 </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
   export default {
-    name: 'header'
+    name: 'header',
+    methods:{
+      ...mapState(['status']),
+      updatedStatus(){
+          return this.status ? 'in field' : 'active'
+      },
+      statusIcon(){
+         return this.status ? 'fa-user' : 'fa-check'
+      }
+    }
+
   }
 </script>
 

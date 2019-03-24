@@ -28,7 +28,7 @@
     name: 'login-page',
     methods:{
       btnAction(){
-        this.$router.push({name: 'queue'})
+        this.$router.push({name: 'status'})
       }
     }
   }
